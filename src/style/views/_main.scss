@@ -1,0 +1,38 @@
+.layout-demo-2-vue {
+  .h-layout {
+    background: #f0f2f5;
+    height: 100vh;
+    .h-layout-sider-theme-white {
+      background: #333333;
+    }
+  }
+  .layout-logo {
+    width: 120px;
+    height: 31px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 16px 24px 16px 0;
+    float: left;
+  }
+
+  // .h-layout-header {
+  // }
+  .h-layout-content {
+    .main_content {
+      height: 100%;
+      padding: 20px;
+      overflow-y: scroll;
+    }
+    ::-webkit-scrollbar {
+      width: 0px;
+      background-color: #f0f2f5;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #5a76cd;
+    }
+  }
+  .h-layout-footer {
+    padding: 24px 50px;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'FZJunHeiS-M-GB';
+    src: url('FZJUNH_ZHUNJW--GB1-0.woff2') format('woff2'),
+        url('FZJUNH_ZHUNJW--GB1-0.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NewsGoth BT';
+    src: url('NewsGothicBT-Roman.woff2') format('woff2'),
+        url('NewsGothicBT-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
