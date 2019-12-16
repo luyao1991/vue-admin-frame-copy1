@@ -17,7 +17,7 @@
 export default {
   data () {
     return {
-      src: 'https://imgavater.ui.cn/avatar/1/2/9/0/910921.png?imageMogr2/auto-orient/crop/!480x480a158a0/thumbnail/148x148',
+      src: 'https://s2.ax1x.com/2019/12/16/Q51ikQ.jpg',
       param: [
         { title: '个人信息', key: 'Home', icon: 'h-icon-home' },
         { title: '安全设置', key: 'message', icon: 'h-icon-bell' },
@@ -41,7 +41,7 @@ export default {
   methods: {
     // 当前页面更改数据
     demo () {
-      this.$store.dispatch('userStore/setUserInfo', {name: 'asadfadsfasdfadf'})
+      this.$store.dispatch('userStore/setUserInfo', {name: '超级管理员'})
     }
   }
 }

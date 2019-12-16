@@ -6,8 +6,8 @@ import App from './App'
 import router from './router'
 import HeyUI from 'heyui'
 import 'heyui/themes/index.less'
-import './style/themes.less'
-import './style/_main.scss'
+import '@/style/themes.less'
+import '@/style/_main.scss'
 
 import Api from '@/http/api.js'
 Vue.prototype.$Api = Api
