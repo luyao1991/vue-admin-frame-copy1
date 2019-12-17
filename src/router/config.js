@@ -1,6 +1,6 @@
 import Login from '@/views/login.vue'
 import Home from '@/views/main.vue'
-
+import Frame from '@/views/frame'
 export default[
   {
     path: '/',
@@ -26,6 +26,19 @@ export default[
         title: '首页'
       },
       component: (resolve) => require(['@/views/pages/console.vue'], resolve)
+    },
+    {
+      path: '/setting',
+      name: 'Setting',
+      component: Frame,
+      children: [{
+        path: 'menu',
+        name: 'Menu',
+        meta: {
+          title: '菜单管理'
+        },
+        component: (resolve) => require(['@/views/pages/setting/menu.vue'], resolve)
+      }]
     },
     {
       path: '/console',
