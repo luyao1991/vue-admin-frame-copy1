@@ -30,6 +30,9 @@
           </ButtonGroup>
         </TableItem>
       </Table>
+      <div class="h-panel-body-bottom">
+        <Pagination v-model="pagination" small align="right" @change="currentChange"></Pagination>
+      </div>
     </div>
   </div>
 </template>
@@ -38,6 +41,11 @@
 export default {
   data () {
     return {
+      pagination: {
+        page: 1,
+        size: 10,
+        total: 100
+      },
       menu_keyword: '',
       menu_status: null,
       menu_status_lsit: { 0: '启用', 1: '禁用' },
@@ -117,7 +125,15 @@ export default {
       console.log(data)
     },
     remove (data) {
-      console.log(data)
+      this.$Confirm('确定删除？', '自定义title').then(() => {
+        this.$Message.success('确定删除！')
+      }).catch(() => {
+        this.$Message.error('取消')
+      })
+    },
+    currentChange (e) {
+      console.log(e)
+      console.log(this.pagination)
     }
   }
 }
