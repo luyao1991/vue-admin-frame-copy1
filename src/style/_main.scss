@@ -2,6 +2,10 @@
 @import 'components/main';
 @import 'views/main';
 @import 'fonts/stylesheet.css';
+html, #app {
+  width: 100%; height: 100%;
+}
 body {
   font-family: 'NewsGoth BT','FZJunHeiS-M-GB';
+  min-width: 100%; min-height: 100%;
 }

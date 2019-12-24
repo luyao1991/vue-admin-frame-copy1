@@ -8,12 +8,12 @@ import HeyUI from 'heyui'
 import 'heyui/themes/index.less'
 import '@/style/themes.less'
 import '@/style/_main.scss'
-
+import heyuiConfig from '@/js/config/heyui-config'
 import Api from '@/http/api.js'
 Vue.prototype.$Api = Api
 
 import store from './store/index'
-
+heyuiConfig()
 Vue.use(HeyUI)
 Vue.config.productionTip = false
 

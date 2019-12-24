@@ -38,6 +38,14 @@ export default[
           title: '菜单管理'
         },
         component: (resolve) => require(['@/views/pages/setting/menu.vue'], resolve)
+      },
+      {
+        path: 'system',
+        name: 'System',
+        meta: {
+          title: '系统配置'
+        },
+        component: (resolve) => require(['@/views/pages/setting/system.vue'], resolve)
       }]
     },
     {

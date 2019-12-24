@@ -35,6 +35,10 @@ export default {
           key: 'Setting',
           children: [
             {
+              title: '系统配置',
+              key: 'System'
+            },
+            {
               title: '菜单管理',
               key: 'Menu'
             }
