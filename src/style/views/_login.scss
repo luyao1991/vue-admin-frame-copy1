@@ -1,0 +1,79 @@
+.login_page {
+  background: #5f4dee;
+  width: 100vw; height: 100vh; overflow: hidden;
+  .login_container {
+    width: 1000px;
+    height: 550px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: .5rem;
+    background-color: #f3f7fd;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    .swiper {
+      float: left;
+      width: 600px; 
+      height: 550px; 
+      display: flex; justify-content: center; align-items: center;
+      flex-direction: column;
+      background: rgba(0, 121, 254, 0.8);
+      font-size: 30px; color: #fff; 
+      img {
+        width: 100px;
+      }
+      h3 {
+        font-weight: 400; margin-top: 40px;
+      }
+    }
+    .login_from {
+      float: right;
+      width: 400px;
+      height: 550px; display: flex; justify-content: center; align-items: center;
+      flex-direction: column;
+      blockquote {
+        font-size: 26px; margin-bottom: 30px; margin-top: 20px;
+      }
+      .h-input {
+        height: 50px; width: 300px; margin-bottom: 20px;
+        input {
+          height: 50px; font-size: 18px;padding-left: 30px;
+        }
+        &.h-input-prefix-icon {
+          >[class^="h-icon"] {
+            height: 18px; width: 18px; font-size: 16px;
+          }
+        }
+      }
+      .other {
+        width: 300px;  margin-bottom: 20px;
+        .save_acttount {
+          float: left;
+        }
+        .fogetpassword {
+          float: right; cursor: pointer;
+        }
+      }
+      .login_btn {
+        .h-btn {
+          width: 300px; height: 50px; font-size: 18px;
+        }
+      }
+      .other_login {
+        h4 {
+          font-weight: 500; margin-top: 20px; text-align: center;
+        }
+        .other_login_type {
+          display: table;  margin: auto; 
+          .login_item {
+            height: 40px; width: 40px; font-size: 20px; line-height: 40px; text-align: center; display: table; float: left;
+            cursor: pointer; margin-right: 20px;
+            &:last-child {
+              margin-right: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

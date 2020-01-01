@@ -1,7 +1,16 @@
-.h-panel-body-top {
-  margin-bottom: 20px;
-  .h-btn {
-    height: 30px; vertical-align: middle;
-    margin-left: 0;
+.main_content {
+  .h-panel {
+    .h-panel-body {
+      .h-panel-body-top {
+        margin-bottom: 20px;
+        .h-btn {
+          height: 30px; vertical-align: middle;
+          margin-left: 0;
+        }
+      }
+      .h-panel-body-bottom {
+        margin-top: 20px;
+      }
+    }
   }
 }
