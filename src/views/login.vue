@@ -3,8 +3,8 @@
     <div class="login_container">
       <div class="swiper">
         <img src="http://localhost:8000/static/img/login_logo.155eeb2c.svg" alt="">
-        <h3>中国铁塔AI能力服务平台</h3>
-        <p>Enterprise Data Service Solutions</p>
+        <h3>ABC通用后台管理模板</h3>
+        <p>ABC Management Template</p>
       </div>
       <div class="login_from">
         <blockquote>用户登录 | USERLOGIN</blockquote>
@@ -53,6 +53,7 @@ export default {
   methods: {
     Login () {
       this.loading = !this.loading
+      this.$router.push('/dashboard')
     },
     openForgetTips () {
       this.$Modal({

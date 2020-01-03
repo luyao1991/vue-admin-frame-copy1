@@ -13,14 +13,17 @@
         :rules="validationRules"
         :model="model"
       >
-        <FormItem label="系统名称" prop="name">
+        <FormItem label="系统名称" prop="system_name">
           <input type="text" v-model="model.name">
         </FormItem>
-        <FormItem label="开放端口" prop="password">
-          <input type="password" v-model="model.password">
+        <FormItem label="开放端口" prop="open_prot">
+          <input type="text" v-model="model.open_prot">
         </FormItem>
-        <FormItem label="开放端口" prop="password">
-          <input type="password" v-model="model.password">
+        <FormItem label="IP地址" prop="prot">
+          <input type="text" v-model="model.prot">
+        </FormItem>
+        <FormItem label="开启域名访问" prop="prot">
+          <Radio v-model="model.radioData" :datas="dataParam"></Radio>
         </FormItem>
         <FormItem>
           <Button color="primary" :loading="isLoading" @click="submit">提交</Button>&nbsp;&nbsp;&nbsp;
@@ -42,9 +45,15 @@ export default {
         left: 'Label左对齐',
         right: 'Label右对齐'
       },
+      dataParam: {
+        1: '开启',
+        2: '关闭'
+      },
       model: {
-        name: '',
-        password: ''
+        system_name: '',
+        open_prot: '',
+        prot: '',
+        radioData: ''
       },
       validationRules: {
         // required: ['name', 'password']
@@ -54,7 +63,6 @@ export default {
     }
   },
   methods: {
-    
   }
 }
 </script>

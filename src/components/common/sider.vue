@@ -30,6 +30,17 @@ export default {
           icon: 'h-icon-search'
         },
         {
+          title: '应用管理',
+          icon: 'h-icon-setting',
+          key: 'App',
+          children: [
+            {
+              title: '应用授权',
+              key: 'AppManager'
+            }
+          ]
+        },
+        {
           title: '系统设置',
           icon: 'h-icon-setting',
           key: 'Setting',
@@ -40,16 +51,16 @@ export default {
             },
             {
               title: '菜单管理',
-              key: 'Menu'
+              key: 'Menu1'
+            },
+            {
+              title: '权限组管理',
+              key: 'Menu2'
+            },
+            {
+              title: '用户管理',
+              key: 'Menu3'
             }
-            // {
-            //   title: '权限管理',
-            //   key: 'mue_au'
-            // },
-            // {
-            //   title: '权限组管理',
-            //   key: 'mue_au_a'
-            // }
           ]
         }
       ]

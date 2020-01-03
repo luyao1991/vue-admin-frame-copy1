@@ -2,7 +2,46 @@
   <div class="h-panel">
     <div class="h-panel-body">
       <Row :space="9">
-        <Cell width="8">
+        <Cell width="12">
+          <div class="h-panel">
+            <div class="h-panel-bar">
+              <span class="h-panel-title">标题</span>
+              <span class="h-panel-right">
+                <a>More</a>
+              </span>
+            </div>
+            <div class="h-panel-body">
+              <div id="container"></div>
+            </div>
+          </div>
+        </Cell>
+        <Cell width="12">
+          <div class="h-panel">
+            <div class="h-panel-bar">
+              <span class="h-panel-title">标题</span>
+              <span class="h-panel-right">
+                <a>More</a>
+              </span>
+            </div>
+            <div class="h-panel-body">
+              <div id="barcontainer"></div>
+            </div>
+          </div>
+        </Cell>
+        <Cell width="12">
+          <div class="h-panel">
+            <div class="h-panel-bar">
+              <span class="h-panel-title">标题</span>
+              <span class="h-panel-right">
+                <a>More</a>
+              </span>
+            </div>
+            <div class="h-panel-body">
+              <div id="container"></div>
+            </div>
+          </div>
+        </Cell>
+        <Cell width="12">
           <div class="h-panel">
             <div class="h-panel-bar">
               <span class="h-panel-title">标题</span>
@@ -26,23 +65,79 @@ export default {
   data () {
     return {
       data: [
-        { item: '事例一', count: 40, percent: 0.4 },
+        { item: '事例一', count: 400, percent: 0.4 },
         { item: '事例二', count: 21, percent: 0.21 },
         { item: '事例三', count: 17, percent: 0.17 },
         { item: '事例四', count: 13, percent: 0.13 },
         { item: '事例五', count: 9, percent: 0.09 }
+      ],
+      dataa: [
+        { type: '汽车', value: 34 },
+        { type: '建材家居', value: 85 },
+        { type: '住宿旅游', value: 103 },
+        { type: '交通运输与仓储邮政', value: 142 },
+        { type: '建筑房地产', value: 251 },
+        { type: '教育', value: 367 },
+        { type: 'IT 通讯电子', value: 491 },
+        { type: '社会公共管理', value: 672 },
+        { type: '医疗卫生', value: 868 },
+        { type: '金融保险', value: 1234 }
       ]
     }
   },
   mounted () {
     this.init()
+    this.barinit()
   },
   methods: {
+    barinit () {
+      const chart = new G2.Chart({
+        container: 'barcontainer',
+        forceFit: true
+      })
+      chart.source(this.dataa, {
+        value: {
+          nice: false,
+          alias: '销量（百万）'
+        }
+      })
+      chart.axis('type', {
+        label: {
+          textStyle: {
+            fill: '#8d8d8d',
+            fontSize: 12
+          }
+        },
+        tickLine: {
+          alignWithLabel: false,
+          length: 0
+        },
+        line: {
+          lineWidth: 0
+        }
+      })
+      chart.axis('value', {
+        label: null,
+        title: {
+          offset: 30,
+          textStyle: {
+            fontSize: 12,
+            fontWeight: 300
+          }
+        }
+      })
+      chart.legend(false)
+      chart.coord().transpose()
+      chart.interval().position('type*value').size(30)
+        .opacity(1)
+      chart.render()
+    },
     init () {
       const chart = new G2.Chart({
         container: 'container',
         forceFit: true,
-        animate: false
+        animate: false,
+        padding: [ 20, 20, 50, 50 ]
       })
       chart.source(this.data, {
         percent: {

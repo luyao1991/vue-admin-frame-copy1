@@ -16,6 +16,21 @@ export default[
     }
   },
   {
+    path: '*',
+    meta: {
+      title: '系统配置'
+    },
+    redirect: '/404'
+  },
+  {
+    path: '/404',
+    name: '页面不存在',
+    meta: {
+      title: '系统配置'
+    },
+    component: () => import('@/views/common/error.vue')
+  },
+  {
     path: '/',
     name: 'Home',
     component: Home,
@@ -26,6 +41,19 @@ export default[
         title: '首页'
       },
       component: (resolve) => require(['@/views/pages/console.vue'], resolve)
+    },
+    {
+      path: '/app',
+      name: 'App',
+      component: Frame,
+      children: [{
+        path: 'manager',
+        name: 'AppManager',
+        meta: {
+          title: '应用管理'
+        },
+        component: (resolve) => require(['@/views/pages/applied/index.vue'], resolve)
+      }]
     },
     {
       path: '/setting',

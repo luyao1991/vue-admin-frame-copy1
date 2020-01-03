@@ -36,7 +36,7 @@ export default {
     }
   },
   created () {
-    this.$store.dispatch('userStore/setUserInfo', {name: 'asdf'})
+    this.$store.dispatch('userStore/setUserInfo', {name: '超级管理员'})
   },
   methods: {
     // 当前页面更改数据
